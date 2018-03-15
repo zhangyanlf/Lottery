@@ -1,10 +1,25 @@
-# Lottery
-瀑布流
+//
+//  ZFWaterflowLayout.m
+//  Lottery
+//
+//  Created by 张彦林 on 2018/2/1.
+//  Copyright © 2018年 zhangyanlf. All rights reserved.
+//
 
+#import "ZFWaterflowLayout.h"
+@interface ZFWaterflowLayout ()
+@property (nonatomic,strong) NSMutableArray *attriArray;
 
-# 自定义布局
+@end
 
-``` iOS
+@implementation ZFWaterflowLayout
+- (NSMutableArray *)attriArray {
+    if (!_attriArray) {
+        _attriArray = [NSMutableArray array];
+    }
+    return _attriArray;
+}
+
 /**
  初始化
  */
@@ -54,4 +69,21 @@
 }
 
 
-```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@end
