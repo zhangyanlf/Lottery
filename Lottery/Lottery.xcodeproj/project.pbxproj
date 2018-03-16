@@ -14,9 +14,15 @@
 		A444137A2022FC250096966C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44413782022FC250096966C /* LaunchScreen.storyboard */; };
 		A444137D2022FC250096966C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A444137C2022FC250096966C /* main.m */; };
 		A4441385202308990096966C /* ZFWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A4441384202308990096966C /* ZFWaterflowLayout.m */; };
+		A46307A7205A56F600EA6FFA /* ZFShop.m in Sources */ = {isa = PBXBuildFile; fileRef = A46307A6205A56F600EA6FFA /* ZFShop.m */; };
+		A46307AB205A572800EA6FFA /* ZFShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A46307A9205A572800EA6FFA /* ZFShopCell.m */; };
+		A46307AC205A572800EA6FFA /* ZFShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A46307AA205A572800EA6FFA /* ZFShopCell.xib */; };
+		A4630840205A749F00EA6FFA /* 1.plist in Resources */ = {isa = PBXBuildFile; fileRef = A463083F205A749F00EA6FFA /* 1.plist */; };
+		E956BFF23A6466B8BAF94C00 /* libPods-Lottery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1AE40094537ECBB8A3B799D /* libPods-Lottery.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46166E9E57618BA243105549 /* Pods-Lottery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottery.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lottery/Pods-Lottery.release.xcconfig"; sourceTree = "<group>"; };
 		A444136A2022FC250096966C /* Lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A444136D2022FC250096966C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A444136E2022FC250096966C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +35,14 @@
 		A444137C2022FC250096966C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A4441383202308990096966C /* ZFWaterflowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFWaterflowLayout.h; sourceTree = "<group>"; };
 		A4441384202308990096966C /* ZFWaterflowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFWaterflowLayout.m; sourceTree = "<group>"; };
+		A46307A5205A56F600EA6FFA /* ZFShop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFShop.h; sourceTree = "<group>"; };
+		A46307A6205A56F600EA6FFA /* ZFShop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFShop.m; sourceTree = "<group>"; };
+		A46307A8205A572800EA6FFA /* ZFShopCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFShopCell.h; sourceTree = "<group>"; };
+		A46307A9205A572800EA6FFA /* ZFShopCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFShopCell.m; sourceTree = "<group>"; };
+		A46307AA205A572800EA6FFA /* ZFShopCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFShopCell.xib; sourceTree = "<group>"; };
+		A463083F205A749F00EA6FFA /* 1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = 1.plist; sourceTree = "<group>"; };
+		B9690B843695D65BED68896C /* Pods-Lottery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lottery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lottery/Pods-Lottery.debug.xcconfig"; sourceTree = "<group>"; };
+		D1AE40094537ECBB8A3B799D /* libPods-Lottery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Lottery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +50,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E956BFF23A6466B8BAF94C00 /* libPods-Lottery.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		749C7FD3D6E21A47F903C28E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9690B843695D65BED68896C /* Pods-Lottery.debug.xcconfig */,
+				46166E9E57618BA243105549 /* Pods-Lottery.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A44413612022FC250096966C = {
 			isa = PBXGroup;
 			children = (
 				A444136C2022FC250096966C /* Lottery */,
 				A444136B2022FC250096966C /* Products */,
+				749C7FD3D6E21A47F903C28E /* Pods */,
+				D8E5E62B8E2E4584E72A0D2C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,12 +87,14 @@
 		A444136C2022FC250096966C /* Lottery */ = {
 			isa = PBXGroup;
 			children = (
+				A463083F205A749F00EA6FFA /* 1.plist */,
+				A46307A4205A56D500EA6FFA /* Controller */,
+				A46307A3205A56B200EA6FFA /* Model */,
+				A46307A2205A56B200EA6FFA /* View */,
 				A444136D2022FC250096966C /* AppDelegate.h */,
+				A444136E2022FC250096966C /* AppDelegate.m */,
 				A4441383202308990096966C /* ZFWaterflowLayout.h */,
 				A4441384202308990096966C /* ZFWaterflowLayout.m */,
-				A444136E2022FC250096966C /* AppDelegate.m */,
-				A44413702022FC250096966C /* ViewController.h */,
-				A44413712022FC250096966C /* ViewController.m */,
 				A44413732022FC250096966C /* Main.storyboard */,
 				A44413762022FC250096966C /* Assets.xcassets */,
 				A44413782022FC250096966C /* LaunchScreen.storyboard */,
@@ -76,6 +104,42 @@
 			path = Lottery;
 			sourceTree = "<group>";
 		};
+		A46307A2205A56B200EA6FFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A46307A8205A572800EA6FFA /* ZFShopCell.h */,
+				A46307A9205A572800EA6FFA /* ZFShopCell.m */,
+				A46307AA205A572800EA6FFA /* ZFShopCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A46307A3205A56B200EA6FFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A46307A5205A56F600EA6FFA /* ZFShop.h */,
+				A46307A6205A56F600EA6FFA /* ZFShop.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A46307A4205A56D500EA6FFA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A44413702022FC250096966C /* ViewController.h */,
+				A44413712022FC250096966C /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8E5E62B8E2E4584E72A0D2C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1AE40094537ECBB8A3B799D /* libPods-Lottery.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +147,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A44413802022FC250096966C /* Build configuration list for PBXNativeTarget "Lottery" */;
 			buildPhases = (
+				08703BEC634AF69A9FC43636 /* [CP] Check Pods Manifest.lock */,
 				A44413662022FC250096966C /* Sources */,
 				A44413672022FC250096966C /* Frameworks */,
 				A44413682022FC250096966C /* Resources */,
+				04F2385CB3CC111F0CC2BA2D /* [CP] Embed Pods Frameworks */,
+				6B8AE3B53C04CBD1E0EC642F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,7 +201,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4630840205A749F00EA6FFA /* 1.plist in Resources */,
 				A444137A2022FC250096966C /* LaunchScreen.storyboard in Resources */,
+				A46307AC205A572800EA6FFA /* ZFShopCell.xib in Resources */,
 				A44413772022FC250096966C /* Assets.xcassets in Resources */,
 				A44413752022FC250096966C /* Main.storyboard in Resources */,
 			);
@@ -142,14 +211,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04F2385CB3CC111F0CC2BA2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lottery/Pods-Lottery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		08703BEC634AF69A9FC43636 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lottery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B8AE3B53C04CBD1E0EC642F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Lottery/Pods-Lottery-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lottery/Pods-Lottery-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A44413662022FC250096966C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A44413722022FC250096966C /* ViewController.m in Sources */,
+				A46307AB205A572800EA6FFA /* ZFShopCell.m in Sources */,
 				A444137D2022FC250096966C /* main.m in Sources */,
 				A444136F2022FC250096966C /* AppDelegate.m in Sources */,
+				A46307A7205A56F600EA6FFA /* ZFShop.m in Sources */,
 				A4441385202308990096966C /* ZFWaterflowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +407,7 @@
 		};
 		A44413812022FC250096966C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9690B843695D65BED68896C /* Pods-Lottery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +422,7 @@
 		};
 		A44413822022FC250096966C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46166E9E57618BA243105549 /* Pods-Lottery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
