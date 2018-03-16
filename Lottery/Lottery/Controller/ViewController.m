@@ -13,7 +13,7 @@
 #import <MJRefresh.h>
 #import <MJExtension.h>
 
-@interface ViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface ViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,ZFWaterflowLayoutDelegate>
 /**
  数据源
  */
@@ -21,6 +21,7 @@
 
 @property (nonatomic,strong)  UICollectionView *collectionView;
 
+//@property (nonatomic,assign) ZFWaterflowLayout *layout;
 @end
 
 @implementation ViewController
@@ -59,11 +60,14 @@ static NSString *const collID = @"collID";
         NSArray *shops = [ZFShop mj_objectArrayWithFilename:@"1.plist"];
         [self.shops removeAllObjects];
         [self.shops addObjectsFromArray:shops];
+       
         
         //刷新数据
         [self.collectionView reloadData];
         [self.collectionView.mj_header endRefreshing];
         self.collectionView.mj_footer.hidden = false;
+        
+        //self.layout.shops = self.shops;
         
     });
     
@@ -75,12 +79,13 @@ static NSString *const collID = @"collID";
 {
     [self.collectionView.mj_footer beginRefreshing];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSArray *shops = [ZFShop mj_objectArrayWithFile:@"1.plist"];
+        NSArray *shops = [ZFShop mj_objectArrayWithFilename:@"1.plist"];
         [self.shops addObjectsFromArray:shops];
-        
+        //self.layout.shops = self.shops;
         //刷新数据
         [self.collectionView reloadData];
         [self.collectionView.mj_footer endRefreshing];
+        
         
     });
     
@@ -92,6 +97,8 @@ static NSString *const collID = @"collID";
 {
     //创建布局
     ZFWaterflowLayout *layout = [[ZFWaterflowLayout alloc] init];
+    //self.layout = layout;
+    layout.delegate = self;
     
     //创建
     
@@ -102,7 +109,7 @@ static NSString *const collID = @"collID";
     
     //注册
     [collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([ZFShopCell class]) bundle:nil] forCellWithReuseIdentifier:collID];
-    collectionView.backgroundColor = [UIColor yellowColor];
+    collectionView.backgroundColor = [UIColor colorWithRed:155/255.0 green:185/255.0 blue:115/255.0 alpha:0.5];
     
     self.collectionView = collectionView;
 }
@@ -126,6 +133,24 @@ static NSString *const collID = @"collID";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - ZFWaterflowLayoutDelegate
+- (CGFloat)waterflowLayout:(ZFWaterflowLayout *)waterflowLayout heightForItemAtIndexPath:(NSInteger)index itemWidth:(CGFloat)itemWidth
+{
+    ZFShop *shop = self.shops[index];
+    return itemWidth * shop.h / shop.w;
+}
+
+- (CGFloat)rowMarginInWaterFlowerLayout:(ZFWaterflowLayout *)waterFlowerLayout
+{
+    return 15;
+}
+
+- (CGFloat)columnMarginInWaterFlowerLayout:(ZFWaterflowLayout *)waterFlowerLayout
+{
+    return 15;
+}
+
 
 
 @end
